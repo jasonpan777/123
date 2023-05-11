@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello页面</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="name">请输入您的名字：</label>
+        <input type="text" id="name" />
+        <p id="greeting">Hello</p>
+    </div>
 
+    <script>
+        var nameInput = document.getElementById('name');
+        var greeting = document.getElementById('greeting');
+
+        nameInput.addEventListener('input', function() {
+            greeting.textContent = 'Hello, ' + nameInput.value;
+        });
+    </script>
+</body>
+</html>
